@@ -1,0 +1,201 @@
+[		{
+			"key":"SCRAM",
+			"display_name":"SCRAM",
+			"description":"serverauth using SCRAM library",
+			"value":false,
+			"required":false,
+			"options":[
+			{
+				"key":"native_CLIENTFIRST",
+				"display_name":"native_CLIENTFIRST",
+				"description":"Client First Challenge generated returned as json style string",
+				"component_type":"string",
+				"value":"",
+				"required":false
+			},
+			{
+				"key":"native_SERVERFIRST",
+				"display_name":"native_SERVERFIRST",
+				"description":"Call Server-first as an argument, create and return Client-Final",
+				"component_type":"string",
+				"value":"",
+				"required":false
+			},
+			{
+				"key":"native_SERVERSECOND",
+				"display_name":"native_SERVERSECOND",
+				"description":"Server-final is called as an argument. Validate server-final.",
+				"component_type":"string",
+				"value":"",
+				"required":false
+			},
+			{
+				"key":"native_CHECK",
+				"display_name":"native_CHECK",
+				"description":"After collecting device information, it is returned as a string in json format.",
+				"component_type":"string",
+				"value":"",
+				"required":false
+			},
+			{
+				"key":"native_CHECK2",
+				"display_name":"native_CHECK2",
+				"description":"Device information + error (detection information) is additionally returned as CODE",
+				"component_type":"string",
+				"value":"",
+				"required":false
+			}
+			]
+		},		{
+			"key":"SIMPLEAUTH",
+			"display_name":"SIMPLEAUTH",
+			"description":"use simpleauth protocol",
+			"value":false,
+			"required":false,
+			"options":[
+			{
+				"key":"native_SIMPLEAUTH_TOKEN",
+				"display_name":"native_SIMPLEAUTH_TOKEN",
+				"description":"call getSimpleAuthToken and return SimpleAuthToken",
+				"component_type":"string",
+				"value":"",
+				"required":false
+			},
+			{
+				"key":"native_SIMPLEAUTH_SET_CF",
+				"display_name":"native_SIMPLEAUTH_SET_CF",
+				"description":"Receive int index, jstring data and store data in custom field index (for custom field support)",
+				"component_type":"string",
+				"value":"",
+				"required":false
+			}
+			]
+		},		{
+			"key":"DEV",
+			"display_name":"DEV",
+			"description":"dev options",
+			"value":true,
+			"required":false,
+			"options":[
+			{
+				"key":"DEBUG",
+				"display_name":"cloud debug level",
+				"description":"0: Release build, 1: DEBUG build",
+				"component_type":"int",
+				"value":0,
+				"required":true
+			},
+			{
+				"key":"VERBOSE",
+				"display_name":"cloud verbose level",
+				"description":"Verbose Level(higher more detail, MAX:3)",
+				"component_type":"int",
+				"value":0,
+				"required":true
+			}
+			]
+		},		{
+			"key":"BINDING",
+			"display_name":"BINDING",
+			"description":"Binding obfuscated method names ",
+			"value":true,
+			"required":false,
+			"options":[
+			{
+				"key":"MOMO_SECURE_KEY",
+				"display_name":"momo secure key",
+				"description":"momo secure key",
+				"component_type":"string",
+				"value":"CE5LYf4KS013QbeE",
+				"required":true
+			},
+			{
+				"key":"MOMO_SECURE_IV",
+				"display_name":"momo secure iv",
+				"description":"momo secure iv",
+				"component_type":"string",
+				"value":"ziqgF7kygQiyhqvn",
+				"required":true
+			},
+			{
+				"key":"native_APPID",
+				"display_name":"native_APPID",
+				"description":"Return the APPID injected into the secondary build",
+				"component_type":"string",
+				"value":"",
+				"required":false
+			},
+			{
+				"key":"native_APPLICATION",
+				"display_name":"native_APPLICATION",
+				"description":"Returns the Application of the current ActivityThread (=current app)",
+				"component_type":"string",
+				"value":"",
+				"required":false
+			},
+			{
+				"key":"NATIVE_MOMO_METHOD",
+				"display_name":"momo method",
+				"description":"Called momo file decrypt method ",
+				"component_type":"string",
+				"value":"a/a/m",
+				"required":false
+			},
+			{
+				"key":"onload",
+				"display_name":"onload",
+				"description":"Called when the dex load is complete, used when waiting for the dex load to complete (secure_handler) ",
+				"component_type":"string",
+				"value":"a/a/q",
+				"required":false
+			},
+			{
+				"key":"java_detect_debugger",
+				"display_name":"java_detect_debugger",
+				"description":"usb debugger detection logic",
+				"component_type":"string",
+				"value":"a/a/x",
+				"required":false
+			},
+			{
+				"key":"triggered",
+				"display_name":"triggered",
+				"description":"if use secure handler, triggered call secure handler method",
+				"component_type":"string",
+				"value":"a/a/STLbu",
+				"required":true
+			},
+			{
+				"key":"triggered_timeout",
+				"display_name":"triggered timeout",
+				"description":"triggered method timeout",
+				"component_type":"int",
+				"value":5000,
+				"required":true
+			},
+			{
+				"key":"triggered_detailed",
+				"display_name":"secure handler error code level",
+				"description":"secure handler error code level",
+				"component_type":"boolean",
+				"value":true,
+				"required":true
+			},
+			{
+				"key":"pause",
+				"display_name":"pause",
+				"description":"Pause appsuit detection logic on background_sleep",
+				"component_type":"string",
+				"value":"",
+				"required":false
+			},
+			{
+				"key":"resume",
+				"display_name":"resume",
+				"description":"Resume appsuit detection logic in background_sleep ",
+				"component_type":"string",
+				"value":"",
+				"required":false
+			}
+			]
+		}]
